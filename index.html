@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дарья Шаманова | Гипнотерапевт, Регрессолог, Целитель</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #E6C567;
+            --gold-dark: #B8860B;
+            --black: #000;
+            --gray-dark: #111;
+            --gray-light: #333;
+            --white: #FFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--black);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .gold-border {
+            position: relative;
+            padding: 40px;
+            border: 2px solid var(--gold);
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 15px auto;
+        }
+        
+        /* Header */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1516731415730-0c607149933b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 100px 0;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Problems Section */
+        .problems {
+            background-color: var(--gray-dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problems:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+        }
+        
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .problem-item:hover {
+            background-color: rgba(212, 175, 55, 0.05);
+            transform: translateX(5px);
+        }
+        
+        .problem-icon {
+            color: var(--gold);
+            font-size: 24px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+        
+        /* About Section */
+        .about {
+            background: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            color: var(--white);
+        }
+        
+        .about:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 3px solid var(--gold);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Diplomas */
+        .diplomas {
+            background-color: var(--gray-dark);
+        }
+        
+        .diploma-slider {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .diploma-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        .diploma-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .diploma-item {
+            scroll-snap-align: start;
+            min-width: 300px;
+            height: 400px;
+            border: 3px solid var(--gold);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--black);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .diploma-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .diploma-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .diploma-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .diploma-dot.active {
+            background-color: var(--gold);
+            transform: scale(1.2);
+        }
+        
+        /* Benefits */
+        .benefits {
+            background: url('https://images.unsplash.com/photo-1540202404-1b927e27fa44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .benefits:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .benefit-item {
+            background-color: rgba(17, 17, 17, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .benefit-item h3 {
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+        
+        /* Social */
+        .social {
+            background-color: var(--black);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--black);
+            font-size: 28px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Steps */
+        .steps {
+            background-color: var(--gray-dark);
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            counter-reset: step;
+        }
+        
+        .step-item {
+            position: relative;
+            padding: 40px 30px 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            border: 1px solid var(--gold);
+            counter-increment: step;
+        }
+        
+        .step-item:before {
+            content: counter(step);
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .step-item h3 {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        /* Form */
+        .form-section {
+            background: url('https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .form-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--gold);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: var(--white);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold-light);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid var(--gold);
+            border-radius: 10px;
+            background-color: rgba(17, 17, 17, 0.5);
+        }
+        
+        .guarantee-icon {
+            color: var(--gold);
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid var(--gold);
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .copyright {
+            color: var(--gray-light);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .gold-border {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Дарья Шаманова</h1>
+                <p>Ведущий гипнотерапевт, регрессолог, гипнокоуч и целитель. Топ-целитель проекта "Мастерская душ" от учеников американской академии гипноза🔮</p>
+                <p>С помощью гипнотерапии я полностью изменила свою жизнь, стала жить жизнью о которой и не мечтала! Много путешествую со своим мужем и могу работать из любой точки мира! 🤩</p>
+                <p><strong>У меня получилось - значит и у тебя получится!</strong></p>
+                <a href="#consultation" class="btn">Записаться на бесплатную консультацию</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">Если узнаешь себя - нажми кнопку ниже</h2>
+            
+            <div class="gold-border">
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-weight"></i></div>
+                    <div class="problem-text">Лишний вес и переедание становятся способом справляться с тревогой, стрессом и низкой самооценкой.</div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-heart-crack"></i></div>
+                    <div class="problem-text">Вы чувствуете вину за переедание и часто жалость к себе, что усугубляет проблему.</div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-comment-slash"></i></div>
+                    <div class="problem-text">Страх осуждения и чужого мнения мешает вам менять привычки и заботиться о себе.</div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-hand"></i></div>
+                    <div class="problem-text">Вы избегаете ответственности и не умеете говорить "нет", что усиливает внутреннюю пустоту.</div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-user"></i></div>
+                    <div class="problem-text">Чувствуете себя одинокой, незначимой и постоянно ищете признания и одобрения.</div>
+                </div>
+                
+                <div class="problem-item">
+                    <div class="problem-icon"><i class="fas fa-border-none"></i></div>
+                    <div class="problem-text">Трудно установить границы, что ведет к ощущению, что жизнь проходит мимо, а вы застряли в этом состоянии.</div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="#consultation" class="btn">Записаться на бесплатную консультацию</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Дарья Шаманова</h2>
+                    <p>Ведущий гипнотерапевт, регрессолог, гипнокоуч и целитель. Топ-целитель проекта "Мастерская душ" от учеников американской академии гипноза🔮</p>
+                    <p>С помощью гипнотерапии я полностью изменила свою жизнь, стала жить жизнью о которой и не мечтала! Много путешествую со своим мужем и могу работать из любой точки мира! 🤩</p>
+                    <p><strong>У меня получилось - значит и у тебя получится!</strong></p>
+                    
+                    <h3>Мои клиенты</h3>
+                    <p>Мои клиенты уверенно идут к своим целям, меняют привычки и создают гармонию внутри себя. Они перестают обращать внимание на негатив и токсичных людей, находят ясность в своих желаниях и мотивации, избавляются от старых ограничений и достигают новых высот — о которых раньше даже не мечтали!</p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Дарья Шаманова">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="gold-border">
+                <h2>Время уходит незаметно, словно ветер</h2>
+                <p>Даже сейчас, когда вы читаете эти слова, жизнь продолжается. Уже нельзя откладывать перемены на потом — настало время действовать!</p>
+                <div class="text-center">
+                    <a href="#consultation" class="btn">Начать изменения сейчас</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diplomas Section -->
+    <section class="diplomas">
+        <div class="container">
+            <h2 class="section-title">Мои дипломы и сертификаты</h2>
+            
+            <div class="diploma-slider">
+                <div class="diploma-container" id="diplomaSlider">
+                    <div class="diploma-item">
+                        <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1390&q=80" alt="Диплом 1">
+                    </div>
+                    <div class="diploma-item">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" alt="Диплом 2">
+                    </div>
+                    <div class="diploma-item">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Диплом 3">
+                    </div>
+                    <div class="diploma-item">
+                        <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Диплом 4">
+                    </div>
+                    <div class="diploma-item">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Диплом 5">
+                    </div>
+                </div>
+                
+                <div class="diploma-nav">
+                    <div class="diploma-dot active"></div>
+                    <div class="diploma-dot"></div>
+                    <div class="diploma-dot"></div>
+                    <div class="diploma-dot"></div>
+                    <div class="diploma-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Что ты получишь?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-search"></i></div>
+                    <h3>Глубокий анализ ситуации</h3>
+                    <p>Определим препятствия, мешающие тебе двигаться вперёд</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Комплексный подход</h3>
+                    <p>Займёмся подсознанием, где хранится истинная информация о тебе</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-link"></i></div>
+                    <h3>Обнаружение причинно-следственных связей</h3>
+                    <p>Устраним вредные убеждения и заменим их на позитивные установки</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-feather"></i></div>
+                    <h3>Лёгкость изменений</h3>
+                    <p>Ты удивишься, насколько легко решаются даже самые сложные проблемы</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <p>В моём арсенале только проверенные, эффективные и безопасные методы, которые уже помогли многим людям изменить свою жизнь к лучшему!</p>
+                <a href="#consultation" class="btn">Записаться на бесплатную консультацию</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="social">
+        <div class="container">
+            <h2 class="section-title">Полезные материалы</h2>
+            <p class="text-center">Подписывайтесь на мои соцсети, чтобы получать полезные материалы и советы</p>
+            
+            <div class="social-links">
+                <a href="https://youtube.com/@dariashamanova?si=ljwc57RNix_Gez4-" class="social-link" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://t.me/DashaShamanova" class="social-link" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@gipnoshaman?_t=ZS-8yJYsJRbzE15&_r=1" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps">
+        <div class="container">
+            <h2 class="section-title">Что нужно сделать, чтобы начать менять свою жизнь</h2>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h3>Оставьте заявку</h3>
+                    <p>На бесплатную консультацию через форму ниже. Я свяжусь с Вами по указанным данным для уточнения даты и времени проведения консультации.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3>Пройдите бесплатную консультацию</h3>
+                    <p>Она проводится онлайн в Телеграм или Zoom. Мы познакомимся и определим ваш запрос.</p>
+                </div>
+                
+                <div class="step-item">
+                    <h3>Подпишите договор и произведите оплату</h3>
+                    <p>После согласования деталей на консультации я составлю договор в двух экземплярах. Произведите оплату удобным для вас способом.</p>
+                </div>
+            </div>
+            
+            <div class="guarantee">
+                <div class="guarantee-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Гарантия результата</h3>
+                <p>Измените свою жизнь с помощью сессий гипнотерапии и авторской программы "Освободитесь от лишнего". Программа позволяет устранить все блоки и ограничения в рамках одного запроса за несколько терапевтических сеансов.</p>
+                <p><strong>Длительность 1-2 часа. Количество необходимых сеансов утверждается индивидуально. Работа осуществляется до результата.</strong></p>
+                <p>8 недель - гарантированный срок достижения результата, прописанного в договоре, сопровождения и поддержки с коррекцией.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="consultation">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-title">
+                    <h2>Записаться на бесплатную консультацию</h2>
+                    <p>Сделайте первый шаг к переменам уже сегодня!</p>
+                </div>
+                
+                <form id="consultationForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Коротко о вашей ситуации</label>
+                        <textarea id="message" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferred">Предпочтительный способ связи</label>
+                        <select id="preferred">
+                            <option value="telegram">Telegram</option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="phone">Телефонный звонок</option>
+                            <option value="email">Email</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Дарья Шаманова</div>
+            <p>Ведущий гипнотерапевт, регрессолог, гипнокоуч и целитель</p>
+            <p class="copyright">© 2023 Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple diploma slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('diplomaSlider');
+            const dots = document.querySelectorAll('.diploma-dot');
+            let currentIndex = 0;
+            
+            // Function to update active dot
+            function updateActiveDot(index) {
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Add click events to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    slider.scrollTo({
+                        left: index * 320,
+                        behavior: 'smooth'
+                    });
+                    updateActiveDot(index);
+                });
+            });
+            
+            // Handle scroll events for slider
+            slider.addEventListener('scroll', () => {
+                const index = Math.round(slider.scrollLeft / 320);
+                if (index !== currentIndex) {
+                    currentIndex = index;
+                    updateActiveDot(index);
+                }
+            });
+            
+            // Form submission
+            const form = document.getElementById('consultationForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо за вашу заявку! Я свяжусь с вами в ближайшее время.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
